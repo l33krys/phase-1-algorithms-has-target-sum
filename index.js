@@ -1,6 +1,16 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
-}
+  for (let i = 0; i < array.length; i++) {
+    for (let j = i + 1; j < array.length; j++) {
+     let total = array[i] + array[j]
+      if (total === target) {
+        //console.log(i, j)
+      return true
+      } 
+    } 
+  } 
+    return false
+ }
 
 /* 
   Write the Big O time complexity of your function here
@@ -8,6 +18,9 @@ function hasTargetSum(array, target) {
 
 /* 
   Add your pseudocode here
+  start with target number and subtract first number
+  check remaining numbers for that number
+  if none exist start with target again and subtract third number
 */
 
 /*
